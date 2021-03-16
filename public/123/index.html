@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba 1</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<h1>Chat con Sockets IO</h1>
+	<div id="chatContainer">
+		<div id="chatWindow">
+			<div id="output"></div>
+			<div id="actions"></div>
+		</div>
+		
+		<input type="text" id="username" placeholder="Usuario"></input>
+		<input type="text" id="message" placeholder="Escribe tu mensaje"></input>
+		<button id="send">Enviar</button>
+	</div>
+	
+	<div id="controls">
+		<h2>Salas</h2>
+		<form>
+			<select name="channel" id="channel">
+				<option value="channel-a">Sala 1</option>
+				<option value="channel-b">Sala 2</option>
+			</select>
+		</form>
+		
+	</div>
+	<div class="options">
+		<div class="createChannel">
+			<h2>Crear Canal</h2>
+			<input type="text" class="inputRoom" placeholder="Ingrese un codigo para su sala mayor a 4 letras"></input>
+			<button id="btnCreateRoom">Crear Sala</button>
+		</div>
+	
+		<div class="joinChannel">
+			<h2>Unirse a un Canal</h2>
+			<input type="text" id="joinRoom" placeholder="Ingrese el codigo de una sala creada"></input>
+			<button id="btnJoinRoom">Unirse</button>
+		</div>
+	</div>
+	
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="example.js"></script>
+</body>
+</html>
